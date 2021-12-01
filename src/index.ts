@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2021-12-01 17:08:25
- * @LastEditTime: 2021-12-01 18:28:24
+ * @LastEditTime: 2021-12-01 19:19:31
  */
 import rc from "rc";
 import * as Helper from "koatty_lib";
@@ -20,19 +20,20 @@ import { Load } from "koatty_loader";
  * @returns {*}  
  */
 export function LoadConfigs(loadPath: string[], baseDir?: string, pattern?: string[], ignore?: string[]) {
-    let conf: any = {};
+    const conf: any = {};
     const env = process.env.KOATTY_ENV || process.env.NODE_ENV || "";
     Load(loadPath, baseDir, function (name: string, path: string, exp: any) {
+        let tempConf: any = {};
         if (name.indexOf("_") > -1) {
             const t = name.slice(name.lastIndexOf("_") + 1);
             if (t && env.indexOf(t) === 0) {
                 name = name.replace(`_${t}`, "");
-
-                conf = rc(name, { [name]: parseEnv(exp) });
+                tempConf = rc(name, { [name]: parseEnv(exp) });
             }
         } else {
-            conf = rc(name, { [name]: parseEnv(exp) });
+            tempConf = rc(name, { [name]: parseEnv(exp) });
         }
+        conf[name] = tempConf[name];
     }, pattern, ignore);
 
     return conf;
