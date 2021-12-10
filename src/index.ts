@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2021-12-01 17:08:25
- * @LastEditTime: 2021-12-01 19:19:31
+ * @LastEditTime: 2021-12-10 16:57:45
  */
 import rc from "rc";
 import * as Helper from "koatty_lib";
@@ -60,6 +60,8 @@ function parseEnv(conf: any) {
                         const value = process.env[element.slice(2, -1)];
                         if (!Helper.isTrueEmpty(value)) {
                             conf[key] = value;
+                        } else {
+                            conf[key] = "";
                         }
                     }
                 }
