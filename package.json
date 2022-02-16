@@ -48,6 +48,10 @@
     "koatty_loader": "^1.x.x",
     "rc": "^1.2.8"
   },
+  "peerDependencies": {
+    "koatty_lib": "^1.x.x",
+    "koatty_loader": "^1.x.x"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
