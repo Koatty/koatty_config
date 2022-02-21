@@ -3,12 +3,12 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2021-12-18 20:53:46
- * @LastEditTime: 2022-02-18 11:43:45
+ * @LastEditTime: 2022-02-21 17:50:34
  */
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
-    'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore']],
+    'type-enum': [2, 'always', ['init', 'feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'build', 'ci', 'chore', 'revert']],
     'type-empty': [2, 'never'],
     'scope-enum': [0], // 不校验scope类型
     'scope-empty': [0], // 不校验scope是否设置
