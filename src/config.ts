@@ -3,11 +3,11 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-02-18 11:19:55
- * @LastEditTime: 2022-05-26 09:57:15
+ * @LastEditTime: 2022-05-26 12:43:14
  */
 import * as Helper from "koatty_lib";
 import { Load } from "koatty_loader";
-const rc = require("koatty_rc");
+const rc = require("rc");
 /**
  * LoadConfigs
  *
