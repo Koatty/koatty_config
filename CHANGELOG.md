@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/Koatty/koatty_config/compare/v1.1.5...v1.1.6) (2023-01-10)
+
+
+### Bug Fixes
+
+* upgrade deps ([fad2c13](https://github.com/Koatty/koatty_config/commit/fad2c1327ae5ebbc7a9c0fc424d1fa8c2f9528ad))
+
 ### [1.1.5](https://github.com/Koatty/koatty_config/compare/v1.1.2...v1.1.5) (2022-05-26)
 
 ### [1.1.2](https://github.com/Koatty/koatty_config/compare/v1.1.0...v1.1.2) (2022-02-18)
