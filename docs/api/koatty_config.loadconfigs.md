@@ -7,7 +7,7 @@
 LoadConfigs
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function LoadConfigs(loadPath: string[], baseDir?: string, pattern?: string[], ignore?: string[]): any;
@@ -15,14 +15,86 @@ export declare function LoadConfigs(loadPath: string[], baseDir?: string, patter
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  loadPath | string\[\] |  |
-|  baseDir | string | <i>(Optional)</i> |
-|  pattern | string\[\] | <i>(Optional)</i> |
-|  ignore | string\[\] | <i>(Optional)</i> |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+loadPath
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+baseDir
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+pattern
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+ignore
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 any
 

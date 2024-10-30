@@ -11,7 +11,7 @@
 
 Indicates that an decorated configuration as a property.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 Value: typeof Config

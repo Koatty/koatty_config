@@ -7,7 +7,7 @@
 Indicates that an decorated configuration as a property.
 
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function Config(key?: string, type?: string): PropertyDecorator;
@@ -15,12 +15,56 @@ export declare function Config(key?: string, type?: string): PropertyDecorator;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  key | string | <i>(Optional)</i> |
-|  type | string | <i>(Optional)</i> configuration type |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+key
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+type
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ configuration type
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 PropertyDecorator
 

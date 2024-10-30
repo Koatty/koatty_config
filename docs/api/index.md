@@ -6,7 +6,24 @@
 
 ## Packages
 
-|  Package | Description |
-|  --- | --- |
-|  [koatty\_config](./koatty_config.md) |  |
+<table><thead><tr><th>
 
+Package
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[koatty\_config](./koatty_config.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

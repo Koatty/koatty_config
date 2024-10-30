@@ -6,14 +6,65 @@
 
 ## Functions
 
-|  Function | Description |
-|  --- | --- |
-|  [Config(key, type)](./koatty_config.config.md) | Indicates that an decorated configuration as a property. |
-|  [LoadConfigs(loadPath, baseDir, pattern, ignore)](./koatty_config.loadconfigs.md) | LoadConfigs |
+<table><thead><tr><th>
+
+Function
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[Config(key, type)](./koatty_config.config.md)
+
+
+</td><td>
+
+Indicates that an decorated configuration as a property.
+
+
+
+</td></tr>
+<tr><td>
+
+[LoadConfigs(loadPath, baseDir, pattern, ignore)](./koatty_config.loadconfigs.md)
+
+
+</td><td>
+
+LoadConfigs
+
+
+
+</td></tr>
+</tbody></table>
 
 ## Variables
 
-|  Variable | Description |
-|  --- | --- |
-|  [Value](./koatty_config.value.md) | Indicates that an decorated configuration as a property. |
+<table><thead><tr><th>
 
+Variable
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[Value](./koatty_config.value.md)
+
+
+</td><td>
+
+Indicates that an decorated configuration as a property.
+
+
+</td></tr>
+</tbody></table>
