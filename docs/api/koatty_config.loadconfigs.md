@@ -10,7 +10,7 @@ LoadConfigs
 **Signature:**
 
 ```typescript
-export declare function LoadConfigs(loadPath: string[], baseDir?: string, pattern?: string[], ignore?: string[]): any;
+export declare function LoadConfigs(loadPath: string[], baseDir?: string, pattern?: string[], ignore?: string[]): Record<string, any>;
 ```
 
 ## Parameters
@@ -96,7 +96,7 @@ _(Optional)_
 </tbody></table>
 **Returns:**
 
-any
+Record&lt;string, any&gt;
 
 {<!-- -->\*<!-- -->}
 
