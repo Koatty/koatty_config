@@ -17,21 +17,19 @@ import { IOCContainer, TAGGED_ARGS } from "koatty_container";
  * @returns {PropertyDecorator}
  */
 export function Config(key?: string, type?: string): PropertyDecorator {
-    return (target: any, propertyKey: string) => {
-        const app = IOCContainer.getApp();
-        if (!app || !app.config) {
-            return;
-        }
-        // identifier = identifier || helper.camelCase(propertyKey, { pascalCase: true });
-        key = key || propertyKey;
-        type = type || "config";
-        IOCContainer.savePropertyData(TAGGED_ARGS, {
-            name: propertyKey,
-            method: function () {
-                return app.config(key, type);
-            }
-        }, target, propertyKey);
-    };
+  return (target: any, propertyKey: string) => {
+    const app = IOCContainer.getApp();
+    if (!app?.config) {
+      return;
+    }
+    key = key || propertyKey;
+    type = type || "config";
+    const configMethod = () => app.config(key, type);
+    IOCContainer.savePropertyData(TAGGED_ARGS, {
+      name: propertyKey,
+      method: configMethod
+    }, target, propertyKey);
+  };
 }
 /**
  * Indicates that an decorated configuration as a property.
