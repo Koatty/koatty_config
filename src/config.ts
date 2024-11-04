@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-02-18 11:19:55
- * @LastEditTime: 2024-11-04 17:18:08
+ * @LastEditTime: 2024-11-04 17:43:47
  */
 import * as Helper from "koatty_lib";
 import { Load } from "koatty_loader";
@@ -23,12 +23,15 @@ export function LoadConfigs(loadPath: string[], baseDir?: string, pattern?: stri
   const env = process.env.KOATTY_ENV || process.env.NODE_ENV || "";
 
   Load(loadPath, baseDir, (name: string, path: string, exp: any) => {
-    const tempConf: any = rc(name, { [name]: parseEnv(exp) });
+    let tempConf: any = {};
     if (name.includes("_")) {
-      const t = name.split("_").pop();
+      const t = name.slice(name.lastIndexOf("_") + 1);
       if (t && env.startsWith(t)) {
         name = name.replace(`_${t}`, "");
+        tempConf = rc(name, { [name]: parseEnv(exp) });
       }
+    } else {
+      tempConf = rc(name, { [name]: parseEnv(exp) });
     }
     conf[name] = tempConf[name];
   }, pattern, ignore);

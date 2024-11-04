@@ -3,17 +3,19 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2021-12-01 17:45:52
- * @LastEditTime: 2021-12-01 17:58:59
+ * @LastEditTime: 2024-11-04 18:27:44
  */
-import { LoadConfigs } from "../src/index";
+import { Config } from "../src/index";
+
+export class ConfigTest {
+    @Config("bb")
+    bb: String;
 
 
-async function test() {
-    const res = await LoadConfigs(["./test"], "", undefined, ["*.test.ts", "test.ts"])
-    console.log(process.env);
-
-    console.log(JSON.stringify(res));
-
+    /**
+     * getBB
+     */
+    public getBB() {
+        return this.bb;
+    }
 }
-
-test();
