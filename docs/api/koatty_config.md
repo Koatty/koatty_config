@@ -42,29 +42,3 @@ LoadConfigs
 
 </td></tr>
 </tbody></table>
-
-## Variables
-
-<table><thead><tr><th>
-
-Variable
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-[Value](./koatty_config.value.md)
-
-
-</td><td>
-
-Indicates that an decorated configuration as a property.
-
-
-</td></tr>
-</tbody></table>

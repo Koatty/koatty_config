@@ -3,15 +3,14 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2021-12-01 17:22:13
- * @LastEditTime: 2024-11-04 18:20:30
+ * @LastEditTime: 2024-11-06 15:24:18
  */
 import { IOCContainer } from "koatty_container";
-import { Helper } from "koatty_lib";
+import { Koatty } from "koatty_core";
 import { LoadConfigs } from "../src/index";
 import { ConfigTest } from "./test";
 
-const app = Object.create(null);
-describe("Load", () => {
+describe("TestConfig", () => {
     beforeAll(async () => {
         process.env.NODE_ENV = "development";
         process.env.ff = "999";
@@ -23,19 +22,15 @@ describe("Load", () => {
         expect(res.config.aa).toEqual(4);
         console.log(res);
     });
-});
 
-
-
-describe("Config", () => {
-    it("TestConfig", async () => {
-        process.env.NODE_ENV = "development";
-        process.env.ff = "999";
-        const res = await LoadConfigs(["./test"], "", undefined, ["*.test.ts", "test.ts"])
-        Helper.define(app, "_configs", res);
+    it("Config", async () => {
+        const appConfig = await LoadConfigs(["./test"], "", undefined, ["*.test.ts", "test.ts"])
+        const app = new Koatty();
+        app.setMetaData("_configs", appConfig);
         IOCContainer.setApp(app);
         IOCContainer.reg("ConfigTest", ConfigTest);
         const ins = IOCContainer.get("ConfigTest");
         expect(ins.getBB()).toEqual(5);
     })
-})
+});
+
