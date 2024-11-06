@@ -3,11 +3,12 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-02-18 11:19:55
- * @LastEditTime: 2024-11-04 17:43:47
+ * @LastEditTime: 2024-11-06 14:14:20
  */
+import { IOCContainer, TAGGED_ARGS } from "koatty_container";
 import * as Helper from "koatty_lib";
 import { Load } from "koatty_loader";
-const rc = require("rc");
+const rc = require("run-con");
 /**
  * LoadConfigs
  *
@@ -57,4 +58,29 @@ function parseEnv(conf: any) {
     }
   });
   return conf;
+}
+
+/**
+ * Indicates that an decorated configuration as a property.
+ *
+ * @export
+ * @param {string} identifier configuration key
+ * @param {string} [type] configuration type
+ * @returns {PropertyDecorator}
+ */
+export function Config(key?: string, type?: string): PropertyDecorator {
+  return (target: object, propertyKey: string) => {
+    IOCContainer.savePropertyData(TAGGED_ARGS, {
+      name: propertyKey,
+      method: () => {
+        const app = IOCContainer.getApp();
+        if (!app?.config) {
+          return null;
+        }
+        key = key || propertyKey;
+        type = type || "config";
+        return app.config(key, type);
+      }
+    }, target, propertyKey);
+  };
 }
