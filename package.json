@@ -1,6 +1,6 @@
 {
   "name": "koatty_config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Configuration loader for Koatty.",
   "scripts": {
     "build": "npm run build:js && npm run build:dts && npm run build:doc && npm run build:cp",
@@ -53,7 +53,7 @@
     "jest-html-reporters": "^3.x.x",
     "reflect-metadata": "^0.x.x",
     "rollup": "^4.x.x",
-    "rollup-plugin-delete": "^3.x.x",
+    "rollup-plugin-delete": "^2.x.x",
     "rollup-plugin-typescript2": "^0.x.x",
     "standard-version": "^9.x.x",
     "ts-jest": "^29.x.x",
